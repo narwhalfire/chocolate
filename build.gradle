@@ -1,0 +1,62 @@
+//
+//class MCExtension {
+//    void version(String string) {
+//        println(string)
+//    }
+//}
+//
+//class SomeTask extends DefaultTask {
+//    String version
+//
+//}
+//
+//class ThisPlugin implements Plugin<Project> {
+//
+//    @Override
+//    void apply(Project project) {
+//        project.extensions.create('minecraft', MCExtension)
+//    }
+//}
+
+
+
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url uri("../chocolate-gradle/build/repo") }
+        maven { url 'https://jitpack.io' }
+    }
+    dependencies {
+        classpath 'st.bleeker.chocolate:chocolate-gradle:0.1.0'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'chocolate-gradle-user'
+
+//apply plugin: ThisPlugin
+
+group 'st.bleeker.chocolate'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+
+}
+
+minecraft {
+
+    mcVersionID = 'latest'
+    mcVersionType = 'snapshot'
+
+}
+

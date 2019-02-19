@@ -1,0 +1,47 @@
+### binaries
+.jar
+.exe
+.elf
+.out
+.bin
+
+### OS
+## Windows
+.Thumb
+.lnk
+[Dd]esktop.ini
+## MacOS
+.DS_store
+._*
+## Linux
+*~
+.nfs*
+
+### IDEs
+## Ecplipse
+.metadata
+bin/
+tmp/
+*.tmp
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+*.classpath
+*.project
+## VSCode
+.vscode/*
+##IntelliJ
+.idea/
+*.iml
+*.iws
+out/
+
+### Gradle
+build/
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+
+## others
+*.bak
